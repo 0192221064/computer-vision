@@ -1,4 +1,5 @@
-watch_cascade = cv2.CascadeClassifier("E:/cv files/cv images/New folder/watch.jpg/watch-cascade.xml")
+import cv2
+watch_cascade = cv2.CascadeClassifier("E:/cv files/cv images/watch-cascade.xml")
 img = cv2.imread("E:/cv files/cv images/New folder/watch.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 watches = watch_cascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5)
